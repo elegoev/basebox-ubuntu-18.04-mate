@@ -152,6 +152,7 @@ Vagrant.configure("2") do |config|
 
       machine.vm.provider "virtualbox" do |v|
           v.name = name
+          v.gui = false
           v.cpus = (hostInfo["vagrant_cpu"] != nil && hostInfo["vagrant_cpu"] != "")?hostInfo["vagrant_cpu"]:2
           ram = (hostInfo["vagrant_ram"] != nil && hostInfo["vagrant_ram"] != "")?hostInfo["vagrant_ram"]:512
           v.customize ["modifyvm", :id, "--description", "#{$description}"]
