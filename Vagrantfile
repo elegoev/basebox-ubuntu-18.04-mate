@@ -162,6 +162,8 @@ Vagrant.configure("2") do |config|
 		        v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
           end
           v.customize ["modifyvm", :id, "--groups", "/%s" % hostInfo["vb_group"] ]
+          v.customize ["modifyvm", :id, "--audio", "none"]
+          v.customize ["modifyvm", :id, "--vram", "256"]
       end
 
       # Define ssh configuration
