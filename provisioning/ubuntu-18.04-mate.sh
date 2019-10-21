@@ -26,4 +26,4 @@ DATE=`date +%Y%m%d%H%M`
 
 # set version
 UBUNTU_VERSION=1.20.1
-echo "$UBUNTU_VERSION.$DATE" > /vagrant/version
+echo "ubuntu-$UBUNTU_VERSION" > /vagrant/version
