@@ -25,5 +25,5 @@ L='ch' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/key
 DATE=`date +%Y%m%d%H%M`
 
 # set version
-UBUNTU_VERSION=1.20.1
+UBUNTU_VERSION=$(lsb_release -a | grep Release | awk  '{print $2}')
 echo "ubuntu-$UBUNTU_VERSION" > /vagrant/version
