@@ -1,4 +1,4 @@
-## ubuntu-18.04-mate
+## ubuntu-18.04-mate 
 Vagrant Box with Ubuntu 18.04 Mate
 
 ### Base image
