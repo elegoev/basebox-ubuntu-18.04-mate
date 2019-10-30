@@ -12,6 +12,7 @@ The base image is provisioned with bash script [ubuntu-18.04-mate.sh](https://gi
 |----------------|-----------------|--------------------|
 | Mate           | vagrant rdp     | vagrant / vagrant  |
 
+### Configuration
 #### Required Vagrant Plugins
 - vagrant-disksize
 - vagrant-hosts
