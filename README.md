@@ -1,4 +1,4 @@
-## ubuntu-18.04-mate 
+## ubuntu-18.04-mate
 Vagrant Box with Ubuntu 18.04 Mate
 
 ### Base image
@@ -26,9 +26,12 @@ The base image is provisioned with bash script [ubuntu-18.04-mate.sh](https://gi
 1. Create directory `mkdir "name of directory"`
 1. Goto directory `cd "name of directory"`
 1. Download basebox `vagrant box add "elegoev/ubuntu-18.04-mate" --provider vmware_esxi`
-1. Create Vagrantfile `vagrant init "elegoev/ubuntu-18.04-mate"`
-1. Create file [`metadata.json`](https://github.com/elegoev/vagrant-ubuntu-18.04/blob/master/jenkins/vagrant/metadata.json.tpl)
-1. Copy and edit [`box.json`](https://github.com/elegoev/vagrant-ubuntu-18.04/blob/master/jenkins/vagrant/box.json.tpl)
+1. Create secret file `.vagrant/secret.yaml`
+   - add `esxi_username: "<ESXi root username"`
+   - add `esxi_password: "<ESXi root password"`
+1. Create [Vagrantfile](https://github.com/elegoev/vagrant-ubuntu-18.04-mate-images/blob/master/jenkins/vagrant/Vagrantfile.tpl)
+1. Create file [`metadata.json`](https://github.com/elegoev/vagrant-ubuntu-18.04-mate-images/blob/master/jenkins/vagrant/metadata.json.tpl)
+1. Copy and edit [`box.json`](https://github.com/elegoev/vagrant-ubuntu-18.04-mate-images/blob/master/jenkins/vagrant/box.json.tpl)
 1. Start vagrant box `vagrant up --provider vmware_esxi`
 
 ### Versioning
