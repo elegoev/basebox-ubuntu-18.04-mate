@@ -7,9 +7,6 @@ Used base image [chenhan/ubuntu-mate-desktop-18.04](https://app.vagrantup.com/ch
 ### Automatic provisioning
 The base image is provisioned with bash script [ubuntu-18.04-mate.sh](https://github.com/elegoev/basebox-ubuntu-18.04-mate/blob/master/provisioning/ubuntu-18.04-mate.sh)
 
-### References
-- [Used Vagrantfile for Basebox](https://github.com/elegoev/vagrant-ubuntu-18.04/blob/master/jenkins/vagrant/esxi/_Vagrantfile)
-
 ### Host Access
 | Application    | Command         | User / Password    |
 |----------------|-----------------|--------------------|
