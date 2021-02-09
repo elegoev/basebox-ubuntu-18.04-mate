@@ -8,7 +8,7 @@
     "inspec_profile": "baseline-ubuntu-18.04-mate",
     "inspec_report": "/inspec/inspec_html_report/baseline-ubuntu-18.04-mate_report.html",
     "inspec_cis_report": "/inspec/inspec_html_report/baseline-ubuntu-18.04-mate_cis_report.html",
-    "github_repo": "https://github.com/elegoev/basevagarbox-ubuntu-18.04-mate",
+    "github_repo": "https://github.com/elegoev/basebox-ubuntu-18.04-mate",
     "github_repo_version": "{{user `github_repo`}}/tree/{{user `image_version`}}",
     "github_inspec_report": "{{user `github_repo`}}/blob/{{user `image_version`}}{{user `inspec_report`}}",
     "vagrant_template": "./packer/files-prov/template/Vagrantfile",
