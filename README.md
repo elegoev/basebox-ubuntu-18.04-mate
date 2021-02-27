@@ -61,7 +61,6 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 
     end
 
-
 ### Using mate
 
 #### xRDP Issue
