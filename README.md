@@ -29,9 +29,7 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 - [vagrant-serverspec](https://github.com/vvchik/vagrant-serverspec)
 - [vagrant-vmware-esxi](https://github.com/josenk/vagrant-vmware-esxi)
 
-### Using mate
-
-#### Vagrantfile
+### Vagrantfile
 
     Vagrant.configure("2") do |config|
 
@@ -62,6 +60,17 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
       end   
 
     end
+
+
+### Using mate
+
+#### xRDP Issue
+
+    xRDP is not working correctly, after 'vagrant up' try the following
+
+    1. 'vagrant rdp' & login with ubuntu / ubuntu (black screen)
+    2. Disconnect RDP Client
+    3. 'vagarnt rdp' & login with vagrant / vagrant
 
 ### Reference
 
