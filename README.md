@@ -14,13 +14,13 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 | packer    | packer build, provisioner and post-processor scripts |
 | test      | test environment for provision & inspec development  |
 
-## Configuration
+## Vagrant
 
 ### Vagrant Cloud
 
 - [elegoev/ubuntu-18.04-mate](https://app.vagrantup.com/elegoev/boxes/ubuntu-18.04-mate)
 
-### Useful Vagrant Plugins
+### Vagrant Plugins
 
 - [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize)
 - [vagrant-hosts](https://github.com/oscar-stack/vagrant-hosts)
@@ -50,6 +50,10 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
           vb.customize ["modifyvm", :id, "--memory", "1024" ]
           vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
           vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+          vb.customize [
+            "modifyvm", :id, "--uartmode1", "file",
+            File.join(Dir.pwd, "ubuntu-bionic-18.04-cloudimg-console.log")
+          ]
           vb.customize ["modifyvm", :id, "--groups", "/#{$vb_group_name}" ]
           vb.customize ["modifyvm", :id, "--vram", 256 ]
         end
@@ -61,32 +65,30 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
 
     end
 
-### Using mate
-
-#### xRDP Issue
+### xRDP Issue
 
     xRDP is not working correctly, after 'vagrant up' try the following
 
     1. 'vagrant rdp' & login with ubuntu / ubuntu (black screen)
     2. Disconnect RDP Client
-    3. 'vagarnt rdp' & login with vagrant / vagrant
+    3. 'vagrant rdp' & login with vagrant / vagrant
 
-### Reference
+## Reference
 
 - [How to set up an xRDP server on Ubuntu 18.04](https://medium.com/@vivekteega/how-to-setup-an-xrdp-server-on-ubuntu-18-04-89f7e205bd4e)
 
-### Versioning
+## Versioning
 
 Repository follows sematic versioning  [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-green.svg)](http://semver.org)
 
-### Changelog
+## Changelog
 
 For all notable changes see [CHANGELOG](https://github.com/elegoev/basebox-ubuntu-18.04-mate/blob/master/CHANGELOG.md)
 
-### License
+## License
 
 Licensed under The MIT License (MIT) - for the full copyright and license information, please view the [LICENSE](https://github.com/elegoev/basebox-ubuntu-18.04-mate/blob/master/LICENSE) file.
 
-### Issue Reporting
+## Issue Reporting
 
 Any and all feedback is welcome.  Please let me know of any issues you may find in the bug tracker on github. You can find it [here.](https://github.com/elegoev/basebox-ubuntu-18.04-mate/issues)

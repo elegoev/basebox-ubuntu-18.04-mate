@@ -2,6 +2,17 @@
 
 application_file_path="/vagrant/installed-application.md"
 
+while :
+do
+  sudo apt-get install -y unzip
+  retcode=$?
+  if [ $retcode -eq 0 ]; then
+    break
+  fi
+  echo "sleep 5s ..."
+  sleep 5
+done
+
 # install mate
 #sudo apt-get install -y mate-core mate-desktop-environment mate-notification-daemon
 sudo apt install -y expect
